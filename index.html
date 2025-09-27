@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Análise de Lixo Eletrônico</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfaf6;
+            color: #5d4037;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #556b2f;
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid #8fbc8f;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Seções de Análise */
+        .analysis-section {
+            background-color: #ffffff;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .analysis-section h2 {
+            font-size: 2rem;
+            color: #556b2f;
+            margin-top: 0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Contêiner para Gráficos */
+        .chart-container {
+            margin-bottom: 2rem;
+        }
+        
+        .chart-container h3 {
+            font-size: 1.5rem;
+            color: #808000;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Layout em Grade para múltiplos gráficos */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* Contêiner de Insights */
+        .insight-container {
+            background-color: #f5f5dc;
+            border-left: 5px solid #8fbc8f;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .insight-container h4 {
+            margin-top: 0;
+            color: #556b2f;
+            font-size: 1.2rem;
+        }
+
+        .insight-container p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dashboard de Análise de Descarte de Lixo Eletrônico</h1>
+    </header>
+
+    <main>
+        <section class="analysis-section">
+            <h2>Análise de Distribuição e Frequência</h2>
+            <div class="grid-container">
+                <div class="chart-container">
+                    <h3>Frequência de Descarte por Tipo de Eletrônico</h3>
+                    <img src="imgs/freq_tipo_eletronico.png" alt="Gráfico de barras da frequência por tipo de eletrônico">
+                    <div class="insight-container">
+                        <h4>Insight:</h4>
+                        <p>Este gráfico revela os tipos de equipamentos eletrônicos mais frequentemente descartados. A identificação das categorias predominantes, como celulares e computadores, é crucial para direcionar campanhas de coleta e logística de reciclagem.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3>Frequência de Descarte por Origem</h3>
+                    <img src="imgs/freq_origem.png" alt="Gráfico de barras da frequência por origem">
+                    <div class="insight-container">
+                        <h4>Insight:</h4>
+                        <p>A análise da origem dos descartes (residencial, comercial, etc.) permite entender os principais geradores de lixo eletrônico. Essa informação pode guiar políticas públicas e parcerias com setores específicos para melhorar a gestão desses resíduos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2>Análise Temporal do Descarte</h2>
+            <div class="chart-container">
+                <h3>Gráficos de Análise Temporal do Descarte Eletrônico</h3>
+                <img src="imgs/dashboard_temporal.png" alt="Dashboard de análise temporal com tendências anuais e mensais">
+                <div class="insight-container">
+                    <h4>Insight:</h4>
+                    <p>O painel temporal mostra a evolução do descarte ao longo dos anos e a sazonalidade mensal. Picos de descarte podem coincidir com períodos pós-festas (Natal, Dia das Mães) ou lançamentos de novas tecnologias, indicando os melhores momentos para campanhas de conscientização e coleta.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="analysis-section">
+            <h2>Análise Agregada por Município</h2>
+             <div class="grid-container">
+                <div class="chart-container">
+                    <h3>Total de Resíduos Descartados por Município (kg)</h3>
+                    <img src="imgs/total_descarte_municipio.png" alt="Gráfico de barras do total de resíduos por município">
+                    <div class="insight-container">
+                        <h4>Insight:</h4>
+                        <p>A visualização do volume total de lixo eletrônico por município aponta as áreas geográficas com maior geração de resíduos. Isso é fundamental para o planejamento de infraestrutura, como a instalação de ecopontos e centros de triagem.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3>Comparação de Descarte Formal vs. Informal por Município</h3>
+                    <img src="imgs/comparativo_destino_municipio.png" alt="Gráfico de barras comparando descarte formal e informal por município">
+                    <div class="insight-container">
+                        <h4>Insight:</h4>
+                        <p>Este comparativo expõe a eficácia das políticas de reciclagem em cada localidade. Municípios com alta taxa de descarte informal necessitam de intervenções urgentes para evitar contaminação ambiental e promover a economia circular.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2>Relação entre Tipo de Eletrônico e Destino Final</h2>
+            <div class="chart-container">
+                <h3>Heatmap: Tipo de Eletrônico vs. Destino Final</h3>
+                <img src="imgs/heatmap_tipo_destino.png" alt="Mapa de calor mostrando a relação entre tipo de eletrônico e seu destino">
+                <div class="insight-container">
+                    <h4>Insight:</h4>
+                    <p>O mapa de calor demonstra padrões de descarte específicos. Por exemplo, itens de menor valor (como carregadores) podem ser mais destinados a lixões, enquanto equipamentos maiores (como geladeiras) podem ter maior chance de irem para cooperativas. Isso ajuda a criar estratégias de coleta focadas por tipo de produto.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="analysis-section">
+            <h2>Impacto da Educação Ambiental no Descarte</h2>
+            <div class="grid-container">
+                <div class="chart-container">
+                    <h3>Proporção de Descarte (Formal vs Informal)</h3>
+                    <img src="imgs/educacao_ambiental.png" alt="Gráfico de barras do descarte em municípios com e sem educação ambiental">
+                    <div class="insight-container">
+                        <h4>Insight:</h4>
+                        <p>Este gráfico tende a mostrar que, em municípios com programas de educação ambiental, a proporção de descarte formal (reciclagem, cooperativas) é significativamente maior, comprovando a eficácia de políticas de conscientização.</p>
+                    </div>
+        </section>
+        
+        <section class="analysis-section">
+            <h2>Análise da Relação entre Origem e Tipo de Lixo Eletrônico</h2>
+            <div class="chart-container">
+                <h3>Tabelas de Análise de Associação</h3>
+                <img src="imgs/dashboard_qui_quadrado.png" alt="Dashboard com mapas de calor e gráfico de barras da análise de Qui-Quadrado">
+                 <div class="insight-container">
+                    <h4>Insight:</h4>
+                    <p>O teste Qui-Quadrado e os gráficos associados confirmam se existe uma relação estatisticamente significativa entre a origem (ex: residencial) e o tipo de eletrônico descartado. O mapa de contribuição destaca quais cruzamentos (ex: "Residencial" e "Celular") são mais fortes, revelando que certos setores são "especializados" em descartar tipos específicos de equipamentos.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
