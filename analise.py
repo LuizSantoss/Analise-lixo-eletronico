@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df_lixo_eletronico = pd.read_csv("E15/desafio6_lixo_eletronico.csv")
+df_lixo_eletronico = pd.read_csv("E15/lixo_eletronico.csv")
 
 
 """
